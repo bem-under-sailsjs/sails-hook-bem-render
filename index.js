@@ -31,7 +31,7 @@ module.exports = function(sails) {
 
                         bemtreeCtx
                             .BEMTREE
-                            .apply({data: data}) // get BEMJSON
+                            .apply(data) // get BEMJSON
                             .then(function(bemjson) {
                                 var html = BEMHTML.apply(bemjson); // render BEMJSON to HTML
 
