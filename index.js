@@ -29,6 +29,9 @@ module.exports = function(sails) {
                     res.render = function render(data) {
                         vm.runInNewContext(BEMTREE, bemtreeCtx);
 
+                        // extend data by req
+                        data.data.req = req;
+
                         bemtreeCtx
                             .BEMTREE
                             .apply(data) // get BEMJSON
