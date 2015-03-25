@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/alexbaumgertner/sails-hook-bem-render.svg)](https://travis-ci.org/alexbaumgertner/sails-hook-bem-render) [![GitHub Release](https://img.shields.io/github/release/alexbaumgertner/sails-hook-bem-render.svg)](https://github.com/alexbaumhertner/sails-hook-bem-render/releases)
+[![Build Status](https://travis-ci.org/alexbaumgertner/sails-hook-bem-render.svg)](https://travis-ci.org/alexbaumgertner/sails-hook-bem-render) [![GitHub Release](https://img.shields.io/github/release/alexbaumgertner/sails-hook-bem-render.svg)](https://github.com/alexbaumgertner/sails-hook-bem-render/releases)
 
 ### BEM template render for Sails js
 
