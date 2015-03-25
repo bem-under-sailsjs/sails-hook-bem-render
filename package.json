@@ -2,7 +2,7 @@
   "name": "sails-hook-bem-render",
   "version": "1.0.0",
   "description": "BEM template engine for Sails app",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jasmine spec/index.spec.js"
   },
