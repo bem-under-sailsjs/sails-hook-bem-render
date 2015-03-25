@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-bem-render",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "BEM template engine for Sails app",
   "main": "index.js",
   "scripts": {
