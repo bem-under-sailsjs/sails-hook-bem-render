@@ -1,5 +1,5 @@
 describe('sails-hook-bem-render', function() {
-    var sails;
+    var sailsObject;
 
     // Before running any tests, attempt to lift Sails
     beforeEach(function(done) {
@@ -16,18 +16,20 @@ describe('sails-hook-bem-render', function() {
                 views: {
                     dir: 'spec/mock/'
                 },
-                log: {level: "error"}
+                log: {level: "silent"}
             },
-            function(err, _sails) {
-                sails = _sails;
+            function(err, sails) {
                 done();
             });
     });
 
     // Test that Sails can lift with the hook in place
-    it('sails should be defined', function(done) {
+    it('sails should be defined', function() {
         expect(sails).toBeDefined();
-        done();
+    });
+
+    it('sails-hook-bem-render hook should be defined', function() {
+        expect(sails.hooks['sails-hook-bem-render']).toBeDefined();
     });
 
     // After tests are complete, lower Sails
