@@ -18,7 +18,7 @@
    module.exports = require('sails-hook-bem-render');
 ```
 ### Usage
-For example see [sails-bem-project-stub](https://github.com/alexbaumgertner/sails-bem-project-stub).
+For example project see [sails-bem-project-stub](https://github.com/alexbaumgertner/sails-bem-project-stub).
 
 1. Create a `/views/common` directory for BEM blocks.
 2. Create `/views/.enb` directory with make-config file for [`enb` assembler](https://github.com/enb-make/enb).
@@ -29,6 +29,40 @@ exports.blocks = [
     {block: 'page'} // Other dependencies will be declare in `page` block.
 ];
 ```
-4. After you add your blocks, run `node_modules/.bin/enb make -d views --no-cache`. It will compile BEMTREE, BEMHTML, assemble js, CSS into `views/desktop.bundles/merged` folder.
-5. So, in BEMTREE-template `page` block you can access data by `this.ctx.data`.
+4. Add dependencies:
+4.1 npm dependency for BEM and enb to package.json:
+```js
+  "dependencies": {
+    "vow": "^0.4.5",
+    "ym": "^0.1.0"
+  },
+  "devDependencies": {
+    "bem": "^0.9.0",
+    "borschik": "^1.3.0",
+    "borschik-tech-cleancss": "^1.0.0",
+    "bower": "^1.3.9",
+    "enb": "^0.13.7",
+    "enb-autoprefixer": "^0.1.1",
+    "enb-bem": "0.1.0-beta2",
+    "enb-bemxjst": "^1.3.2",
+    "enb-borschik": "^1.1.1",
+    "enb-diverse-js": "^0.1.0",
+    "enb-modules": "^0.2.0",
+    "enb-stylus": "1.1.2"
+    }
+```
+4.2 bower:
+```js
+  "dependencies": {
+    "bem-core": "2.6.0"
+  }
+```
+Don't forget to add `.bowerrc` file:
+```js
+{
+    "directory": "views/libs"
+}
+```
+5. After you add your blocks, run `node_modules/.bin/enb make -d views --no-cache`. It will compile BEMTREE, BEMHTML, assemble js, CSS into `views/desktop.bundles/merged` folder.
+6. So, in BEMTREE-template `page` block you can access data by `this.ctx.data`.
 NB: you can find `req` (`req.session`, `req.path` and other useful stuff) object in `this.ctx.data.req`.
