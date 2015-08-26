@@ -22,7 +22,7 @@ For example project see [sails-bem-project-stub](https://github.com/alexbaumgert
 
 1. Create a `/views/common` directory for BEM blocks.
 2. Create `/views/.enb` directory with make-config file for [`enb` assembler](https://github.com/enb-make/enb).
-You can copy config from [sails-bem-project-stub/views/.enb/make.js](https://github.com/alexbaumgertner/sails-bem-project-stub/blob/master/views/.enb/make.js). Notice: there is only `desktop` config yet.
+You can copy config from [sails-bem-project-stub/frontend/.enb/make.js](https://github.com/alexbaumgertner/sails-bem-project-stub/blob/master/frontend/.enb/make.js). Notice: there is only `desktop` config yet.
 3. Create `/views/desktop.bundles/index/index.bemdecl.js` file – dependency declaration for `enb` assembler:
 ```js
 exports.blocks = [
